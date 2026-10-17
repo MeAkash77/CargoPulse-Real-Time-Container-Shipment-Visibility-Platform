@@ -1,0 +1,424 @@
+/* Row gutters (g-3 / g-4) own the spacing on this page, not per-card margins */
+.dashboard-page .card {
+  margin-bottom: 0;
+}
+
+/* Extra breathing room on the sides of list/legend content
+   (global .card-body padding is !important, so match it) */
+.dashboard-page .donut-card-body,
+.dashboard-page .card-body--padded {
+  padding: 18px 20px !important;
+}
+
+.dashboard-section-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.dashboard-page .dashboard-chart-card-body {
+  padding: 20px 22px !important;
+}
+
+.dashboard-chart-wrap {
+  position: relative;
+  height: 260px;
+}
+
+.dashboard-chart-wrap--line {
+  flex: 1;
+  height: auto;
+  min-height: 250px;
+}
+
+.dashboard-table {
+  background-color: transparent !important;
+  margin-bottom: 0;
+}
+
+.dashboard-table thead th {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted) !important;
+  border-bottom-color: var(--border) !important;
+  padding: 8px 16px;
+}
+
+.dashboard-table tbody td {
+  color: var(--text-primary) !important;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+
+.dashboard-table tbody tr {
+  border-color: var(--border) !important;
+  transition: background var(--transition-fast);
+}
+
+.dashboard-table tbody tr:hover td {
+  background: var(--bg-hover) !important;
+}
+
+.dashboard-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Performance snapshot strip ──────────────────────── */
+
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.kpi-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+}
+
+.kpi-chip-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  background: var(--blue-bg);
+  color: var(--blue-text);
+}
+
+.kpi-chip-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.kpi-chip-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0;
+}
+
+/* ── Donut charts ─────────────────────────────────────── */
+
+/* Container query lets the legend restack when the card (not the
+   viewport) gets too narrow to sit beside the donut. */
+.donut-card-body {
+  container-type: inline-size;
+  display: flex;
+  align-items: center;
+}
+
+.donut-layout {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.dashboard-chart-wrap--donut {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.donut-center-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.donut-center-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+}
+
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.donut-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.donut-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.donut-legend-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.donut-legend-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+@container (max-width: 379px) {
+  .donut-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dashboard-chart-wrap--donut {
+    height: 180px;
+    width: 180px;
+  }
+
+  .donut-legend {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 20px;
+    width: 100%;
+  }
+}
+
+/* ── Progress bars (shared dark track + brand fill) ──── */
+
+.dashboard-progress {
+  height: 6px;
+  background: var(--bg-hover);
+  border: none;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.dashboard-progress .progress-bar {
+  background: var(--accent);
+  border-radius: 99px;
+  min-width: 4px;
+}
+
+.dashboard-progress .progress-bar.bg-success { background: var(--green-line) !important; }
+.dashboard-progress .progress-bar.bg-warning { background: var(--yellow-line) !important; }
+.dashboard-progress .progress-bar.bg-danger  { background: var(--red-line) !important; }
+.dashboard-progress .progress-bar.bg-info    { background: var(--blue-line) !important; }
+
+/* ── Network overview ─────────────────────────────────── */
+
+.network-type-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.network-type-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.network-type-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.connection-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.connection-chip {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+  border: none;
+}
+
+.connection-chip--active {
+  background: var(--green-bg);
+  color: var(--green-text);
+}
+
+.connection-chip--delayed {
+  background: var(--red-bg);
+  color: var(--red-text);
+}
+
+.connection-chip--at_capacity {
+  background: var(--yellow-bg);
+  color: var(--yellow-text);
+}
+
+/* ── Recent activity feed ─────────────────────────────── */
+
+.activity-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.activity-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-row:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  border: none;
+  background: var(--bg-inset);
+}
+
+.activity-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activity-detail {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activity-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+/* ── Node capacity utilization ────────────────────────── */
+
+.utilization-row {
+  margin-bottom: 16px;
+}
+
+.utilization-row:last-child {
+  margin-bottom: 0;
+}
+
+.utilization-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.utilization-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ── Low stock table cells ────────────────────────────── */
+
+.stock-product {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.stock-location {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.stock-level-col {
+  width: 45%;
+}
+
+.stock-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.stock-bar {
+  flex: 1;
+}
+
+.stock-cell-text {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .kpi-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .kpi-strip {
+    grid-template-columns: 1fr;
+  }
+}

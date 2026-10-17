@@ -1,0 +1,75 @@
+.shipment-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.shipment-route {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.route-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.route-value {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.route-arrow {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.shipment-dates {
+  background: var(--bg-inset);
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.date-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.date-value {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.delivered-date {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.delivered-date .date-value {
+  color: var(--green-text);
+  font-weight: 500;
+}

@@ -1,0 +1,69 @@
+/* Property card: flat surface, hairline border, label above
+   value, and a small tinted icon chip using the tag palette. */
+
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  transition: border-color var(--transition-base), background var(--transition-base);
+  position: relative;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.stat-card:hover {
+  border-color: var(--border-strong);
+}
+
+.stat-card-body {
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stat-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.stat-icon-pill {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--gray-bg);
+  color: var(--gray-text);
+}
+
+.stat-value {
+  font-size: 1.625rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ── Tone variants ── */
+
+.stat-card--gray   .stat-icon-pill { background: var(--gray-bg);   color: var(--gray-text); }
+.stat-card--blue   .stat-icon-pill { background: var(--blue-bg);   color: var(--blue-text); }
+.stat-card--green  .stat-icon-pill { background: var(--green-bg);  color: var(--green-text); }
+.stat-card--red    .stat-icon-pill { background: var(--red-bg);    color: var(--red-text); }
+.stat-card--yellow .stat-icon-pill { background: var(--yellow-bg); color: var(--yellow-text); }
+.stat-card--purple .stat-icon-pill { background: var(--purple-bg); color: var(--purple-text); }

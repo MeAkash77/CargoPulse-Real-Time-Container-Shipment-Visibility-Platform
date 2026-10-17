@@ -1,0 +1,39 @@
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.products-page .position-relative .form-control {
+  padding-right: 2.4rem;
+  min-width: 250px;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.product-icon {
+  background: var(--gray-bg);
+  color: var(--gray-text);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+
+.stats-summary {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}

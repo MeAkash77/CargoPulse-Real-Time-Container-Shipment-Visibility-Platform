@@ -1,0 +1,46 @@
+.reports-page .report-card .card-body {
+  padding: 20px !important;
+}
+
+.report-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-bg);
+  color: var(--blue-text);
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.report-card-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.report-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.report-card-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.report-card-count {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}

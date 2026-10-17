@@ -1,0 +1,98 @@
+.map-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  max-width: 100%;
+  z-index: 1000;
+}
+
+.map-legend .card {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-popover);
+}
+
+.map-legend .card-body {
+  padding: 12px 14px !important;
+}
+
+.legend-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.legend-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+
+.factory-icon { background: var(--blue-bg); color: #4a9ad4; }
+.warehouse-icon { background: var(--purple-bg); color: #9c6fc4; }
+.store-icon { background: var(--green-bg); color: #4f9d72; }
+.supplier-icon { background: var(--orange-bg); color: #dd8b3a; }
+
+.legend-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.risk-low, .performance-high { background-color: #4f9d72; }
+.risk-medium, .performance-medium { background-color: #d9a441; }
+.risk-high, .performance-low { background-color: #e0625c; }
+
+.legend-line {
+  height: 3px;
+  width: 22px;
+  border-radius: 2px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.normal-line { background-color: #3b8fe4; }
+.delayed-line { background-color: #e0625c; }
+.capacity-line { background-color: #d9a441; }
+.risk-low-line, .performance-high-line { background-color: #4f9d72; }
+.risk-medium-line, .performance-medium-line { background-color: #d9a441; }
+.risk-high-line, .performance-low-line { background-color: #e0625c; }
+
+.legend-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .map-legend {
+    bottom: 10px;
+    right: 10px;
+    width: 170px;
+  }
+}

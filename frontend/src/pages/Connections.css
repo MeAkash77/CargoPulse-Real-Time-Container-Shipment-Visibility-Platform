@@ -1,0 +1,22 @@
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.connections-page .search-group {
+  min-width: 380px;
+}
+
+.connections-page .toolbar-actions .btn {
+  min-width: 160px;
+  min-height: 36px;
+  justify-content: center;
+}

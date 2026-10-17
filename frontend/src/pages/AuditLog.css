@@ -1,0 +1,42 @@
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.audit-log-page .search-group {
+  min-width: 260px;
+}
+
+.audit-log-page .toolbar-filters {
+  gap: 10px;
+}
+
+/* The icon and its label are one unit — keep the Type column on a single
+   line and size it to its content instead of letting the label wrap. */
+.audit-log-page .table thead th:first-child,
+.audit-log-page .table tbody td:first-child {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.audit-type-icon {
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: 0.7rem;
+  margin-right: 8px;
+  background: var(--bg-inset);
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}

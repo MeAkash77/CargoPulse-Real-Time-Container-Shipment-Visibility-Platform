@@ -1,0 +1,33 @@
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}

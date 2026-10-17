@@ -1,0 +1,708 @@
+/* ══════════════════════════════════════════════════════════════
+   Landing page — marketing layout.
+   Centered hero with an oversized, tightly-tracked headline, a small
+   primary button, soft pastel cards from the tag palette, and generous
+   white space. Themed like the rest of the app.
+   ══════════════════════════════════════════════════════════════ */
+
+.landing-wrapper {
+  min-height: 100vh;
+  background: var(--bg-app);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── Navbar ──────────────────────────────────────────── */
+
+.landing-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--bg-app);
+  border-bottom: 1px solid var(--border);
+}
+
+.landing-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.landing-nav-logo {
+  width: 104px;
+  height: auto;
+  display: block;
+  filter: var(--logo-filter);
+  opacity: var(--logo-opacity);
+}
+
+.landing-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-nav-signin {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-base);
+}
+
+.landing-nav-signin:hover {
+  background: var(--bg-hover);
+}
+
+.landing-nav-theme {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+.landing-nav-theme:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.landing-nav-cta {
+  padding: 6px 15px;
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  background: var(--accent);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: background var(--transition-base);
+}
+
+.landing-nav-cta:hover {
+  background: var(--accent-hover);
+}
+
+/* ── Hero ────────────────────────────────────────────── */
+
+.landing-hero {
+  position: relative;
+  padding: 132px 0 0;
+  overflow: hidden;
+}
+
+/* One soft pastel wash behind the headline — decorative, not a glow. */
+.hero-glow {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 420px;
+  background: radial-gradient(ellipse at center, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.landing-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: center;
+}
+
+.landing-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--green-bg);
+  border: none;
+  color: var(--green-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+}
+
+.hero-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-line);
+  box-shadow: none;
+}
+
+.landing-h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+  color: var(--text-primary);
+  margin: 0 auto 24px;
+  max-width: 16ch;
+}
+
+.landing-h1-dim {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.landing-h1-line2 {
+  display: block;
+  white-space: normal;
+}
+
+.landing-hero-sub {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 620px;
+  margin: 0 auto 28px;
+}
+
+.landing-hero-ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.btn-lp-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  background: var(--accent);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-base);
+}
+
+.btn-lp-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-lp-primary--lg {
+  padding: 10px 22px;
+  font-size: 1rem;
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 56px;
+}
+
+.hero-trust svg {
+  color: var(--green-text);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+/* ── Floating live cards (decorative, flank the headline) ─── */
+
+.hero-float-cards {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-float-card {
+  position: absolute;
+  width: 230px;
+  padding: 12px 14px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-popover);
+  text-align: left;
+}
+
+/* Decorative only — they sit outside the text column and are hidden
+   entirely once the viewport is too narrow to seat them clear of it. */
+.hero-float-card--alert {
+  top: 40px;
+  right: -40px;
+  transform: rotate(3deg);
+}
+
+.hero-float-card--shipment {
+  top: 260px;
+  left: -40px;
+  transform: rotate(-3deg);
+}
+
+.hero-float-card-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.hero-float-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.hero-float-dot--warn {
+  background: var(--yellow-line);
+  box-shadow: none;
+}
+
+.hero-float-dot--ok {
+  background: var(--green-line);
+  box-shadow: none;
+}
+
+.hero-float-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+}
+
+.hero-float-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0 0 4px;
+}
+
+.hero-float-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ── Product screenshots ─────────────────────────────── */
+
+/* Soft tinted mat with the app window floating on it. */
+.shot-frame {
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 16px 0 0 16px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.shot-frame--hero {
+  height: clamp(320px, 44vw, 580px);
+  padding: clamp(16px, 2.2vw, 30px) 0 0 clamp(16px, 2.2vw, 30px);
+  border-radius: var(--radius-xl);
+}
+
+.shot-window {
+  background: var(--bg-app);
+  border: 1px solid var(--border);
+  border-right: none;
+  border-bottom: none;
+  border-radius: var(--radius-lg) 0 0 0;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: var(--shadow-popover);
+}
+
+.shot-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--border);
+}
+
+.shot-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+.shot-window img {
+  display: block;
+  width: 100%;
+  height: calc(100% - 34px);
+  object-fit: cover;
+  object-position: top left;
+}
+
+/* ── Stats Bar ───────────────────────────────────────── */
+
+.landing-stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: var(--bg-sidebar);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 32px;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.landing-stat {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 24px;
+  border-right: 1px solid var(--border);
+}
+
+.landing-stat:last-child {
+  border-right: none;
+}
+
+.landing-stat .stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.landing-stat .stat-label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+}
+
+/* ── Sections ────────────────────────────────────────── */
+
+.landing-section {
+  padding: 80px 0;
+}
+
+.landing-section--tight-top {
+  padding-top: 16px;
+}
+
+.section-divider {
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  max-width: 20ch;
+}
+
+.section-title-dim {
+  display: block;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ── Product surface cards ───────────────────────────── */
+
+.surfaces-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.surface-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 22px 22px 0;
+  overflow: hidden;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.surface-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-raised);
+}
+
+.surface-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.surface-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  min-height: 44px;
+}
+
+.surface-link {
+  font-size: 0.9375rem;
+  margin-bottom: 16px;
+}
+
+.surface-card .shot-frame {
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border-bottom: none;
+  height: 230px;
+  padding: 14px 0 0 14px;
+}
+
+/* Inline link: accent coloured, arrow slides on hover */
+.lp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--accent-text) !important;
+  text-decoration: none !important;
+  transition: color var(--transition-base);
+}
+
+.lp-link:hover {
+  color: var(--accent-hover) !important;
+}
+
+.lp-link-arrow {
+  font-size: 0.7rem;
+  transition: transform var(--transition-base);
+}
+
+.lp-link:hover .lp-link-arrow {
+  transform: translateX(3px);
+}
+
+/* ── Features ────────────────────────────────────────── */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: left;
+}
+
+.feature-card {
+  padding: 22px;
+  border-radius: var(--radius-xl);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.feature-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-raised);
+}
+
+/* Each feature chip picks a different hue from the tag palette so the
+   grid reads as playful rather than uniform. */
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  margin-bottom: 14px;
+  background: var(--blue-bg);
+  border: none;
+  color: var(--blue-text);
+}
+
+.feature-card:nth-child(2) .feature-icon { background: var(--red-bg);    color: var(--red-text); }
+.feature-card:nth-child(3) .feature-icon { background: var(--green-bg);  color: var(--green-text); }
+.feature-card:nth-child(4) .feature-icon { background: var(--purple-bg); color: var(--purple-text); }
+.feature-card:nth-child(5) .feature-icon { background: var(--yellow-bg); color: var(--yellow-text); }
+.feature-card:nth-child(6) .feature-icon { background: var(--orange-bg); color: var(--orange-text); }
+
+.feature-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  letter-spacing: -0.015em;
+}
+
+.feature-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── CTA Banner ──────────────────────────────────────── */
+
+.landing-cta-section {
+  padding: 112px 32px;
+  text-align: center;
+  background: var(--bg-sidebar);
+  border-top: 1px solid var(--border);
+}
+
+.landing-cta-h2 {
+  font-size: clamp(2rem, 4.4vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  line-height: 1.08;
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+
+.landing-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 32px;
+  background: var(--bg-app);
+}
+
+.landing-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.landing-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo {
+  width: 84px;
+  height: auto;
+  display: block;
+  opacity: 0.5;
+  filter: var(--logo-filter);
+}
+
+.footer-copy {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+
+@media (max-width: 1340px) {
+  .hero-float-cards {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .surfaces-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-hero {
+    padding: 110px 0 0;
+  }
+
+  .landing-nav-inner,
+  .landing-container {
+    padding: 0 20px;
+  }
+
+  .landing-nav-signin { display: none; }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-section {
+    padding: 56px 0;
+  }
+
+  .landing-stats-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 48px;
+  }
+
+  .landing-stat {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    width: 100%;
+  }
+
+  .landing-stat:last-child {
+    border-bottom: none;
+  }
+
+  .shot-frame--hero {
+    height: 260px;
+  }
+
+  .landing-cta-section { padding: 72px 24px; }
+}

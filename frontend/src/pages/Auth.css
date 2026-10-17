@@ -1,0 +1,432 @@
+/* ══════════════════════════════════════════════════════
+   Full-page split login layout
+   ══════════════════════════════════════════════════════ */
+
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-app);
+}
+
+/* ── Left panel ─────────────────────────────────────── */
+
+.login-left {
+  position: relative;
+  flex: 0 0 52%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+}
+
+.login-left-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 32px 48px;
+}
+
+.login-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary) !important;
+  text-decoration: none !important;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid var(--border-input);
+  transition: background var(--transition-base), color var(--transition-base);
+  position: absolute;
+  top: 32px;
+  left: 48px;
+}
+
+.login-back-link:hover {
+  color: var(--text-primary) !important;
+  background: var(--bg-hover);
+}
+
+.login-brand {
+  margin-bottom: 16px;
+}
+
+.login-brand-wordmark {
+  width: 130px;
+  height: auto;
+  display: block;
+  filter: var(--logo-filter);
+  opacity: var(--logo-opacity);
+}
+
+.login-left-body {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.login-left-headline {
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.login-headline-accent {
+  color: var(--text-muted);
+}
+
+.login-headline-line2 {
+  display: block;
+}
+
+.login-left-sub {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 430px;
+}
+
+.login-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.login-feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: var(--gray-bg);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-text);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+/* One hue per feature, from the tag palette. The pairings match the
+   equivalent cards on the landing page: map=blue, shipments=green,
+   forecasting=purple, alerts=yellow. */
+.login-feature-item:nth-child(1) .login-feature-icon {
+  background: var(--blue-bg);
+  color: var(--blue-text);
+}
+
+.login-feature-item:nth-child(2) .login-feature-icon {
+  background: var(--green-bg);
+  color: var(--green-text);
+}
+
+.login-feature-item:nth-child(3) .login-feature-icon {
+  background: var(--purple-bg);
+  color: var(--purple-text);
+}
+
+.login-feature-item:nth-child(4) .login-feature-icon {
+  background: var(--yellow-bg);
+  color: var(--yellow-text);
+}
+
+/* ── Right panel ────────────────────────────────────── */
+
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-app);
+  padding: 48px 32px;
+}
+
+.login-form-wrap {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form-header {
+  margin-bottom: 18px;
+}
+
+.login-form-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+
+.login-form-sub {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Render notice ──────────────────────────────────── */
+
+.render-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--bg-inset);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.render-notice-icon {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Form fields ────────────────────────────────────── */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.lf-group {
+  margin-bottom: 20px;
+}
+
+.lf-label {
+  display: block;
+  font-size: 0.8125rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 6px !important;
+}
+
+.lf-input {
+  width: 100%;
+  padding: 9px 12px !important;
+  height: auto !important;
+  background: var(--bg-inset) !important;
+  border: 1px solid transparent !important;
+  box-shadow: inset 0 0 0 1px var(--border) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-sm) !important;
+  font-size: 0.9375rem !important;
+  transition: box-shadow var(--transition-base), background-color var(--transition-base);
+}
+
+.lf-input:focus {
+  border-color: transparent !important;
+  box-shadow: inset 0 0 0 1px var(--accent), 0 0 0 2px var(--accent-soft) !important;
+  background: var(--bg-inset) !important;
+  outline: none;
+}
+
+.lf-input::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* ── Buttons ────────────────────────────────────────── */
+
+.lf-btn-primary,
+.lf-btn-demo {
+  width: 100%;
+  padding: 9px 18px !important;
+  font-size: 0.9375rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  border-radius: var(--radius-md) !important;
+  background: var(--accent) !important;
+  border: none !important;
+  color: #ffffff !important;
+  box-shadow: none;
+  transition: background var(--transition-base) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 8px;
+}
+
+/* Both auth pages have exactly one submit button and it's the primary
+   action, so they share the filled treatment. */
+.lf-btn-primary:hover:not(:disabled),
+.lf-btn-demo:hover:not(:disabled) {
+  background: var(--accent-hover) !important;
+}
+
+.lf-btn-primary:disabled,
+.lf-btn-demo:disabled {
+  opacity: 0.5;
+  box-shadow: none !important;
+}
+
+.lf-btn-arrow {
+  font-size: 0.7rem;
+  transition: transform var(--transition-base);
+}
+
+.lf-btn-primary:hover .lf-btn-arrow,
+.lf-btn-demo:hover .lf-btn-arrow {
+  transform: translateX(2px);
+}
+
+.lf-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.lf-divider::before,
+.lf-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.lf-demo-hint {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0 0 22px;
+  letter-spacing: 0;
+}
+
+.lf-input--locked {
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+  pointer-events: none;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .login-left {
+    flex: 0 0 280px;
+    height: auto;
+    min-height: 280px;
+  }
+
+  .login-left-content {
+    padding: 24px 28px;
+  }
+
+  .login-back-link {
+    margin-bottom: 20px;
+  }
+
+  .login-left-body {
+    display: none;
+  }
+
+  .login-right {
+    flex: 1;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-right {
+    padding: 32px 20px;
+  }
+
+  .login-form-title {
+    font-size: 1.5rem;
+  }
+}
+
+.auth-logo-mark img {
+  width: 140px;
+  height: auto;
+  display: block;
+  filter: var(--logo-filter);
+  opacity: var(--logo-opacity);
+}
+
+/* ── Register page (centered card) ──────────────────── */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background: var(--bg-sidebar);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-popover);
+  padding: 36px 40px 32px;
+}
+
+.auth-back-link {
+  margin-bottom: 28px;
+}
+
+.auth-card .auth-logo-mark {
+  margin-bottom: 28px;
+}
+
+.auth-switch-link {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 22px 0 0;
+}
+
+.auth-switch-link a {
+  color: var(--accent-text);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-switch-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,38 @@
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-group {
+  min-width: 280px;
+}
+
+@media (min-width: 992px) {
+  .search-group {
+    min-width: 360px;
+  }
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.shipment-tracker-page .table td:last-child {
+  white-space: nowrap;
+}
+
+.progress {
+  height: 6px;
+  background: var(--bg-hover);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: var(--accent);
+  border-radius: 99px;
+}

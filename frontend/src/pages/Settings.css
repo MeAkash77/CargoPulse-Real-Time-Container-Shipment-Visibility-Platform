@@ -1,0 +1,28 @@
+.settings-page .card-body {
+  padding: 20px !important;
+}
+
+.settings-page .card-header {
+  padding: 14px 20px !important;
+}
+
+.settings-page .card-body h6 {
+  color: var(--text-primary);
+}
+
+.settings-page .guest-mode-alert {
+  background: var(--yellow-bg) !important;
+  border: none !important;
+  color: var(--yellow-text) !important;
+}
+
+.settings-switch {
+  margin-bottom: 4px;
+}
+
+.settings-hint {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  margin-left: 2px;
+}

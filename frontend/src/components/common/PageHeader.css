@@ -1,0 +1,37 @@
+/* Page title: large, tightly tracked, semibold — not black-weight,
+   and never a gradient. Subtitle is quiet gray beneath it. */
+
+.page-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.035em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.page-title-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin: 4px 0 0;
+}
+
+.page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .page-title { font-size: 1.5rem; }
+}

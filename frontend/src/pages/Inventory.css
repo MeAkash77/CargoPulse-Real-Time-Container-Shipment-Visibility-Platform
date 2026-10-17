@@ -1,0 +1,38 @@
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.search-group {
+  min-width: 200px;
+  width: 240px;
+  max-width: 240px;
+}
+
+.inventory-page .toolbar-filters {
+  gap: 10px;
+}
+
+.inventory-page .toolbar-filters .form-select {
+  width: 160px;
+}
+
+@media (min-width: 992px) {
+  .search-group {
+    min-width: 260px;
+    width: 300px;
+    max-width: 300px;
+  }
+
+  .inventory-page .toolbar-filters .form-select {
+    width: 180px;
+  }
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
